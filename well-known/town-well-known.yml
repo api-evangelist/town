@@ -1,0 +1,54 @@
+generated: '2026-07-21'
+method: searched
+description: >-
+  Results of probing the /.well-known/ discovery surface for Town's hosts.
+  www.town.com is a fully auth-gated product (Vercel + Cloudflare managed
+  challenge): every /.well-known/ path and /llms.txt answers 307 to
+  /sign-in?redirect_url=..., so no public discovery documents exist there.
+  api.town.com is Town's Convex backend deployment ("This Convex deployment
+  is running") and serves no well-known documents. The one real public
+  discovery document is robots.txt, which carries explicit Content-Signal
+  declarations (search=yes, ai-input=yes, ai-train=no, use=reference) plus
+  per-crawler AI-training disallows — saved verbatim as town-robots.txt.
+hosts:
+  - host: https://www.town.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 307
+        note: Redirects to /sign-in?redirect_url=%2F.well-known%2Fsecurity.txt (auth-gated app catch-all).
+      - path: /.well-known/openid-configuration
+        status: 307
+        note: Redirects to /sign-in (no public OIDC discovery).
+      - path: /.well-known/oauth-authorization-server
+        status: 307
+        note: Redirects to /sign-in.
+      - path: /.well-known/api-catalog
+        status: 307
+        note: Redirects to /sign-in.
+      - path: /.well-known/ai-plugin.json
+        status: 307
+        note: Redirects to /sign-in.
+      - path: /llms.txt
+        status: 307
+        note: Redirects to /sign-in (no public llms.txt).
+      - path: /robots.txt
+        status: 200
+        type: text/plain
+        file: town-robots.txt
+        note: >-
+          Contains Cloudflare-managed and Town-authored Content-Signal
+          declarations (search=yes, ai-input=yes, ai-train=no, use=reference)
+          and disallows GPTBot/ClaudeBot/Google-Extended/CCBot and other
+          AI-training crawlers. Also reveals app routes (/townie/, /approve/,
+          /marketing-routines, /marketing-integrations) and the sitemap.
+      - path: /sitemap.xml
+        status: 403
+        note: Cloudflare managed challenge.
+  - host: https://api.town.com
+    documents:
+      - path: /
+        status: 200
+        type: text/plain
+        note: '"This Convex deployment is running." — Town''s backend runs on Convex; not a public API surface.'
+      - path: /.well-known/security.txt
+        status: 404

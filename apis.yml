@@ -1,8 +1,29 @@
 aid: town
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/town.png
 name: Town
-description: Town is a company surfaced as a portfolio company of a16z, forerunner-ventures and added
-  to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment
-  pipeline.
+description: >-
+  Town is a personal AI assistant that works across email, calendar, Slack,
+  docs, WhatsApp, and the web. Users connect their accounts and Town — through
+  a personal agent called a "Townie" — learns how they work, then suggests and
+  runs automated "routines" (meeting briefs, email drafting, follow-ups,
+  scheduling) on their behalf. Founded by Jean-Denis Greze (former Plaid CTO)
+  and Tony Vincent (former Google product/AI lead), Town raised a $55M Series A
+  led by Andreessen Horowitz (June 2026) with Forerunner Ventures, First Round,
+  Alt Capital, and Conviction participating. Town publishes no public developer
+  program: the product is fully auth-gated, api.town.com is a Convex backend
+  deployment rather than a public API, and its robots.txt carries explicit
+  Content-Signal declarations restricting AI training on its content.
 url: https://raw.githubusercontent.com/api-evangelist/town/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,11 +32,23 @@ x-backed-by:
 - forerunner-ventures
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 5
+  pass: local-v1
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
+- Artificial Intelligence
+- Agents
+- Personal Assistant
+- Productivity
+- Email
+- Calendar
+- Automation
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -24,4 +57,16 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://town.com
+  url: https://www.town.com
+- type: SignUp
+  url: https://www.town.com/sign-up
+- type: TrustCenter
+  url: security/town-trust-center.yml
+- type: DomainSecurity
+  url: security/town-domain-security.yml
+- type: WellKnown
+  url: well-known/town-well-known.yml
+- type: ContentSignal
+  url: well-known/town-robots.txt
+- type: LLMsTxt
+  url: llms/town-llms.txt

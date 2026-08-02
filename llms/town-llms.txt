@@ -1,0 +1,19 @@
+# Town
+
+> Town (town.com) is a personal AI assistant that works across email, calendar, Slack, docs, WhatsApp, and the web. Users connect their accounts and Town — through a personal agent called a "Townie" — learns how they work, then suggests and runs automated "routines" (meeting briefs, email drafting, follow-ups, scheduling) on their behalf. Founded by Jean-Denis Greze (former Plaid CTO, Dropbox engineering) and Tony Vincent (former Google product/AI, Dropbox design). Town raised a $55M Series A led by Andreessen Horowitz (announced June 3, 2026) with participation from Forerunner Ventures, First Round, Alt Capital, and Conviction.
+
+Town publishes no public developer program: www.town.com is auth-gated behind a Cloudflare managed challenge, every /.well-known/ path and /llms.txt redirects to /sign-in, and api.town.com is a Convex backend deployment rather than a public API. docs.town.com redirects to www.town.com/docs (also gated). No first-party SDK packages were found on npm or PyPI, and no official Town MCP server is listed in the official MCP registry.
+
+## Company
+
+- [Website](https://www.town.com/): Product homepage (sign-in gated; Cloudflare challenge for crawlers).
+- [Sign up](https://www.town.com/sign-up): Create a Town account.
+- [Sign in](https://www.town.com/sign-in): Existing-account sign-in.
+- [Trust Center](https://trust.town.com/): Vanta-hosted security/privacy/compliance trust center; audit reports on request.
+- [a16z investment announcement](https://a16z.com/announcement/investing-in-town/): $55M Series A, June 3, 2026.
+- [Forerunner investment note](https://forerunnerventures.com/perspectives/investing-in-town-the-most-valuable-thing-ai-can-learn-is-you.html): "Investing in Town: The Most Valuable Thing AI Can Learn is You" (June 2, 2026).
+
+## Machine signals
+
+- [robots.txt](https://www.town.com/robots.txt): Carries Content-Signal declarations (search=yes, ai-input=yes, ai-train=no, use=reference) and disallows AI-training crawlers (GPTBot, ClaudeBot, Google-Extended, CCBot, and others).
+- [API host](https://api.town.com/): Convex deployment backing the product; not a public developer API.
