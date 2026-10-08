@@ -67,6 +67,8 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: Pricing
+  url: https://www.town.com/pricing
 - type: Plans
   url: plans/town-plans-pricing.yml
 - url: https://www.town.com/updates
