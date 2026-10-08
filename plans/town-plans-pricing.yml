@@ -1,0 +1,91 @@
+# Pricing transcribed from the provider's own page — see provenance. Numbers are quoted, not derived.
+generated: '2026-10-07'
+method: searched
+source: https://www.town.com/pricing
+sources:
+- https://www.town.com/pricing
+provenance:
+  tool: all/0-working/economics/harvest_pricing.py
+  run: 20261007T112026
+  grounding: every price_text was found verbatim in the fetched page text
+audience: business-product
+pricing_basis: tiered-subscription
+delivery:
+  delivery: managed
+  method: page
+  read: '2026-10-07'
+  managed_tier: Starter
+published: true
+note: Subscription tiers with monthly credit allotments plus pay-as-you-go per-credit overage rates; Team/Team
+  Plus seat prices not shown as dollar amounts, only their per-credit overage rates.
+plan_count: 8
+currency: USD
+plans:
+- name: Free
+  price_text: $0 forever
+  price: 0
+  currency: USD
+  period: month
+  unit: user
+  included_quota: 30 chat messages / month, weekly briefing, all integrations, 7-day Pro trial
+- name: Starter
+  price_text: $15 /month
+  price: 15
+  currency: USD
+  period: month
+  unit: user
+  included_quota: 1,250 credits included monthly; 10 person research lookups/month; 15 on-demand meeting
+    briefings/month
+  overage: none (prompted to upgrade)
+- name: Pro
+  price_text: $49 /month
+  price: 49
+  currency: USD
+  period: month
+  unit: per user, billed annually
+  included_quota: 5,000 credits included monthly; 50 person research lookups/month
+  overage: $0.044 per credit
+- name: Power
+  price_text: $99 /month
+  price: 99
+  currency: USD
+  period: month
+  unit: per user, billed annually
+  included_quota: 12,000 credits included monthly; 150 person research lookups
+  overage: $0.038 per credit
+- name: Power Plus
+  price_text: $199 /month
+  price: 199
+  currency: USD
+  period: month
+  unit: per user, billed annually
+  included_quota: 40,000 credits included monthly; unlimited person research lookups
+  overage: $0.032 per credit
+- name: Team
+  price_text: $0.038
+  price: 0.038
+  currency: USD
+  period: per-use
+  unit: credit (overage rate)
+  included_quota: 6,000/seat pooled credits
+  overage: $0.038 per credit
+- name: Team Plus
+  price_text: $0.030
+  price: 0.03
+  currency: USD
+  period: per-use
+  unit: credit (overage rate)
+  included_quota: 18,000/seat pooled credits
+  overage: $0.030 per credit
+- name: Enterprise
+  price_text: Talk to sales
+  period: none
+  included_quota: Everything in Team Plus, plus unlimited seats, custom rates, dedicated support, security
+    review
+  overage: custom rates
+rate_limit_statements:
+- 30 chat messages / month with personal assistant
+- 10 person research lookups / month
+- 15 on-demand meeting briefings/month
+- 50 person research lookups / month
+- Higher concurrent routine limits
